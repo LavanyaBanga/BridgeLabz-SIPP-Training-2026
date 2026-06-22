@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class SchoolPortal {
+public class StudentResult{
     public static void main(String[] args) {
         try (
                 BufferedReader br = new BufferedReader(new FileReader("students.txt"));
