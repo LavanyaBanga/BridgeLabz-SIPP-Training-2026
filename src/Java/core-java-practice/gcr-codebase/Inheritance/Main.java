@@ -1,3 +1,5 @@
+package Java.core
+
 class EducationCourse {
     protected String courseName;
     protected int duration; // in hours
