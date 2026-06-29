@@ -1,90 +1,83 @@
-abstract class Shape {
+public abstract class Shape {
 
-    public abstract double area();
+    abstract double calculateArea();
+    abstract double calculatePerimeter();
 
-    public abstract double perimeter();
+    void display() {
+        System.out.println("Area: " + calculateArea());
+        System.out.println("Perimeter: " + calculatePerimeter());
+    }
+
+    public static void main(String[] args) {
+
+        CircleShape c = new CircleShape(7);
+        RectangleShape r = new RectangleShape(10, 5);
+        TriangleShape t = new TriangleShape(3, 4, 5);
+
+        System.out.println("----- Circle -----");
+        c.display();
+
+        System.out.println();
+
+        System.out.println("----- Rectangle -----");
+        r.display();
+
+        System.out.println();
+
+        System.out.println("----- Triangle -----");
+        t.display();
+    }
 }
 
-class Circle extends Shape {
+class CircleShape extends Shape {
+    double radius;
 
-    private double radius;
-
-    public Circle(double radius) {
+    CircleShape(double radius) {
         this.radius = radius;
     }
 
-    public double area() {
+    double calculateArea() {
         return Math.PI * radius * radius;
     }
 
-    public double perimeter() {
+    double calculatePerimeter() {
         return 2 * Math.PI * radius;
     }
 }
 
-class Rectangle extends Shape {
+class RectangleShape extends Shape {
+    double length;
+    double breadth;
 
-    private double length;
-    private double width;
-
-    public Rectangle(double length, double width) {
+    RectangleShape(double length, double breadth) {
         this.length = length;
-        this.width = width;
+        this.breadth = breadth;
     }
 
-    public double area() {
-        return length * width;
+    double calculateArea() {
+        return length * breadth;
     }
 
-    public double perimeter() {
-        return 2 * (length + width);
-    }
-}
-
-class Triangle extends Shape {
-
-    private double side1;
-    private double side2;
-    private double side3;
-
-    public Triangle(double side1, double side2, double side3) {
-        this.side1 = side1;
-        this.side2 = side2;
-        this.side3 = side3;
-    }
-
-    public double perimeter() {
-        return side1 + side2 + side3;
-    }
-
-    public double area() {
-        double s = perimeter() / 2;
-        return Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
+    double calculatePerimeter() {
+        return 2 * (length + breadth);
     }
 }
 
-public class ShapeHierarchy {
+class TriangleShape extends Shape {
+    double a, b, c;
 
-    public static void main(String[] args) {
+    TriangleShape(double a, double b, double c) {
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
 
-        Shape[] shapes = {
-                new Circle(5),
-                new Rectangle(10, 4),
-                new Triangle(3, 4, 5)
-        };
+    double calculateArea() {
+        double s = (a + b + c) / 2;
+        return Math.sqrt(s * (s - a) * (s - b) * (s - c));
+    }
 
-        System.out.println("===== Shape Report =====");
-
-        for (Shape shape : shapes) {
-
-            System.out.println("\nShape : "
-                    + shape.getClass().getSimpleName());
-
-            System.out.printf("Area      : %.2f%n",
-                    shape.area());
-
-            System.out.printf("Perimeter : %.2f%n",
-                    shape.perimeter());
-        }
+    double calculatePerimeter() {
+        return a + b + c;
     }
 }
