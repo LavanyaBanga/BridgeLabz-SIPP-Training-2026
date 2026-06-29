@@ -1,30 +1,30 @@
-class MovieTicket{
+class MovieTicket {
 
-    int itemCode;
-    String itemName;
+    String movieName;
+    String seatNumber;
     double price;
 
-    MovieTicket(int itemCode, String itemName, double price) {
-        this.itemCode = itemCode;
-        this.itemName = itemName;
+    MovieTicket(String movieName) {
+        this.movieName = movieName;
+    }
+
+    void bookTicket(String seatNumber, double price) {
+        this.seatNumber = seatNumber;
         this.price = price;
     }
 
     void displayDetails() {
-        System.out.println("Item Code: " + itemCode);
-        System.out.println("Item Name: " + itemName);
-        System.out.println("Price: " + price);
-    }
-
-    void totalCost(int quantity) {
-        System.out.println("Total Cost = " + (price * quantity));
+        System.out.println("Movie Name: " + movieName);
+        System.out.println("Seat Number: " + seatNumber);
+        System.out.println("Ticket Price: " + price);
     }
 
     public static void main(String[] args) {
 
-        MovieTicket i = new MovieTicket.(1001, "Laptop", 55000);
+        MovieTicket ticket = new MovieTicket("Avengers");
 
-        i.displayDetails();
-        i.totalCost(2);
+        ticket.bookTicket("A10", 300);
+
+        ticket.displayDetails();
     }
 }
