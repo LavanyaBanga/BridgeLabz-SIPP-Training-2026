@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 class Book {
     protected String title;
     protected int publicationYear;
