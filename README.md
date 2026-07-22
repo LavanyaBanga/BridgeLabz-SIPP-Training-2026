@@ -33,27 +33,15 @@ The repository documents my learning journey through **Core Java, Object-Oriente
 
 ```text
 BridgeLabz-SIPP-Training-2026/
-│
+
 ├── core-java-practice/
 │   ├── gcr-codebase/
-│   │   ├── programming-elements/
-│   │   ├── control-flow/
-│   │   ├── arrays/
-│   │   ├── methods/
-│   │   └── strings/
 │   │
 │   ├── leet-code-codebase/
 │   └── scenario-based/
-│
+│   |_SQL
 ├── oops-practice/
-│   ├── gcr-codebase/
-│   │   ├── classes-and-objects/
-│   │   ├── constructors/
-│   │   ├── inheritance/
-│   │   ├── encapsulation/
-│   │   ├── polymorphism/
-│   │   └── abstraction/
-│   │
+│   |
 │   ├── leet-code-codebase/
 │   └── scenario-based/
 │
@@ -114,26 +102,6 @@ BridgeLabz-SIPP-Training-2026/
 * Real-world Java applications
 * Code optimisation
 * Time and space complexity analysis
-
----
-
-## Sample Programs
-
-The repository includes Java programs based on real-world entities and scenarios, such as:
-
-* Bank Account Management
-* Book Management
-* Employee Management
-* Product Management
-* Student Management
-* Vehicle Management
-* Patient Management
-* Transport System
-* Notification System
-* Game Character System
-* Library Member Management
-
----
 
 ## Coding Standards Followed
 
@@ -210,26 +178,14 @@ Through this training, I am improving my ability to:
 
 ## Progress Status
 
-The repository is regularly updated as new concepts, assignments, reviews, and coding challenges are completed during the training program.
-
----
-
-## Author
-
-**Lavanya Banga**
+The repository is regularly updated as new concepts, assignments, reviews, and coding challenges are completed during the training program.*
 
 * B.Tech Computer Science and Engineering
 * GitHub: [LavanyaBanga](https://github.com/LavanyaBanga)
 * Repository: [BridgeLabz-SIPP-Training-2026](https://github.com/LavanyaBanga/BridgeLabz-SIPP-Training-2026)
 
----
-
 ## Acknowledgement
 
 I would like to thank **BridgeLabz** and the mentors involved in the **SIPP Training 2026** program for providing structured learning resources, practical assignments, scenario-based exercises, and continuous guidance.
-
----
-
-## License
 
 This repository is created for educational and training purposes.
